@@ -19,7 +19,7 @@ def part1(data):
 
     lines = '\n'.join(line.strip('\n') for line in data if len(line) != 0)
 
-    tiles = {num: tile for num, tile in zip([int(x) for x in re.findall('\d+', lines)], [np.asarray([list(l) for l in line.strip('\n').split('\n')]) for line in re.split('Tile \d+:', lines)[1:]])}
+    tiles = {num: tile for num, tile in zip([int(x) for x in re.findall(r'\d+', lines)], [np.asarray([list(l) for l in line.strip('\n').split('\n')]) for line in re.split(r'Tile \d+:', lines)[1:]])}
     sideInfo = defaultdict(lambda: set())
 
     for n, t in zip(tiles.keys(), tiles.values()):
@@ -63,7 +63,7 @@ def part2(data):
 
     lines = '\n'.join(line.strip('\n') for line in data if len(line) != 0)
 
-    tiles = {num: tile for num, tile in zip([int(x) for x in re.findall('\d+', lines)], [np.asarray([list(l) for l in line.strip('\n').split('\n')]) for line in re.split('Tile \d+:', lines)[1:]])}
+    tiles = {num: tile for num, tile in zip([int(x) for x in re.findall(r'\d+', lines)], [np.asarray([list(l) for l in line.strip('\n').split('\n')]) for line in re.split(r'Tile \d+:', lines)[1:]])}
     sideInfo = defaultdict(lambda: set())
 
     for n, t in zip(tiles.keys(), tiles.values()):

@@ -18,11 +18,11 @@ def part1(data):
     ranges = {}
     i = 0
     while len(data[i]) > 0:
-        ranges[re.split(':', data[i])[0]] = [int(x) for x in re.findall('\d+', data[i])]
+        ranges[re.split(':', data[i])[0]] = [int(x) for x in re.findall(r'\d+', data[i])]
         i += 1
 
     i += 2
-    otherTickets = {tuple(int(x) for x in re.findall('\d+', line)) for line in data[i + 3:]}
+    otherTickets = {tuple(int(x) for x in re.findall(r'\d+', line)) for line in data[i + 3:]}
 
     errorRate = 0
     for t in list(otherTickets):
@@ -53,12 +53,12 @@ def part2(data, testing = False):
     ranges = {}
     i = 0
     while len(data[i]) > 0:
-        ranges[re.split(':', data[i])[0]] = [int(x) for x in re.findall('\d+', data[i])]
+        ranges[re.split(':', data[i])[0]] = [int(x) for x in re.findall(r'\d+', data[i])]
         i += 1
 
     i += 2
-    mine = [int(x) for x in re.findall('\d+', data[i])]
-    otherTickets = {tuple(int(x) for x in re.findall('\d+', line)) for line in data[i + 3:]}
+    mine = [int(x) for x in re.findall(r'\d+', data[i])]
+    otherTickets = {tuple(int(x) for x in re.findall(r'\d+', line)) for line in data[i + 3:]}
 
     for t in list(otherTickets):
         validTicket = True

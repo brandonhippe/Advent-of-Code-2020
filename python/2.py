@@ -18,7 +18,7 @@ def part1(data):
     count = 0
 
     for line in data:
-        counts = [int(x) for x in re.findall('\d+', line)]
+        counts = [int(x) for x in re.findall(r'\d+', line)]
         c = re.findall('[a-z]:', line)[0][0]
         pwd = re.split(' ', line)[-1]
 
@@ -38,7 +38,7 @@ def part2(data):
     count = 0
 
     for line in data:
-        counts = [int(x) for x in re.findall('\d+', line)]
+        counts = [int(x) for x in re.findall(r'\d+', line)]
         c = re.findall('[a-z]:', line)[0][0]
         pwd = re.split(' ', line)[-1]
 

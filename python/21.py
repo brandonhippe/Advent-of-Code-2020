@@ -22,7 +22,7 @@ def part1(data):
     
     for i, line in enumerate(data):
         line = line.replace(',', '')
-        ings, alls = re.split(' \(contains ', line)
+        ings, alls = re.split(r' \(contains ', line)
         for ingredient in re.split(' ', ings):
             ingredients[ingredient].add(i)
             ingredientOccurrances[ingredient] += 1
@@ -54,7 +54,7 @@ def part2(data):
     
     for i, line in enumerate(data):
         line = line.replace(',', '')
-        ings, alls = re.split(' \(contains ', line)
+        ings, alls = re.split(r' \(contains ', line)
         for ingredient in re.split(' ', ings):
             ingredients[ingredient].add(i)
             ingredientOccurrances[ingredient] += 1

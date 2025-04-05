@@ -26,8 +26,8 @@ def part1(data):
             continue
 
         ruleNum, rText = line.split(':')
-        if len(re.findall('\d+', rText)) != 0:
-            rules[int(ruleNum)] = [[int(x) for x in re.findall('\d+', o)] for o in rText.split('|')]
+        if len(re.findall(r'\d+', rText)) != 0:
+            rules[int(ruleNum)] = [[int(x) for x in re.findall(r'\d+', o)] for o in rText.split('|')]
         else:
             rules[int(ruleNum)] = rText.strip('" ')
 
@@ -56,8 +56,8 @@ def part2(data):
             continue
 
         ruleNum, rText = line.split(':')
-        if len(re.findall('\d+', rText)) != 0:
-            rules[int(ruleNum)] = [[int(x) for x in re.findall('\d+', o)] for o in rText.split('|')]
+        if len(re.findall(r'\d+', rText)) != 0:
+            rules[int(ruleNum)] = [[int(x) for x in re.findall(r'\d+', o)] for o in rText.split('|')]
         else:
             rules[int(ruleNum)] = rText.strip('" ')
 

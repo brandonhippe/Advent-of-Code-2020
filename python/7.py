@@ -36,14 +36,14 @@ def part2(data):
 
 class Bag:
     def __init__(self, bagText):
-        bagCounts = [int(x) for x in re.findall('\d+', bagText)]
+        bagCounts = [int(x) for x in re.findall(r'\d+', bagText)]
         data = re.split(' bag?s |, ', bagText)
 
         self.name = data[0]
         self.bags = {}
         if len(bagCounts) > 0:
             for i, text in enumerate(data[1:]):
-                start = re.search('\d+', text).span()[1] + 1
+                start = re.search(r'\d+', text).span()[1] + 1
                 end = re.search('bag', text).span()[0] - 1
                 self.bags[text[start:end]] = bagCounts[i]
 

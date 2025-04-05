@@ -20,7 +20,7 @@ def part1(data):
         if line[1] == 'a':
             mask = re.split(' ', line)[-1]
         else:
-            addr, val = [int(x) for x in re.findall('\d+', line)]
+            addr, val = [int(x) for x in re.findall(r'\d+', line)]
             ones = int(''.join(['1' if c == '1' else '0' for c in mask]), 2)
             zeros = int(''.join(['0' if c == '0' else '1' for c in mask]), 2)
             mem[addr] = (val & zeros) | ones
@@ -40,7 +40,7 @@ def part2(data):
         if line[1] == 'a':
             mask = re.split(' ', line)[-1]
         else:
-            addr, val = [int(x) for x in re.findall('\d+', line)]
+            addr, val = [int(x) for x in re.findall(r'\d+', line)]
             ones = int(''.join(['1' if c == '1' else '0' for c in mask]), 2)
 
 
