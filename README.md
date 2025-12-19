@@ -3,7 +3,7 @@
 # brandonhippe's Advent of Code Solutions for 2020
 <!-- #{(year_tiles)} -->
 <h1 align="center">
-  2020 - 50 ⭐ - C/Rust/Python
+  2020 - 50 ⭐ - Rust/Python/C
 </h1>
 <a href="c/1.c">
   <img src=".tiles/images/2020/01.png" width="161px">
